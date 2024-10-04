@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>佐渡で食えっちゃ</title><!--ページタイトル-->
+        <!--<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=default"></script>Cloudflareの設定-->
+        <meta name="description" content="佐渡観光を応援するため、佐渡島内の飲食店、駐車場、公共トイレの位置情報をGoogleMapを活用して、旅のサポート情報としてまとめてみました。"><!--サイト説明-->
+        <meta name="robots" content="All"><!--検索クローラー設定-->
+        <link rel="stylesheet" href="./style.css"><!--style参照元-->
+        <style>
+            .gm-ui-hover-effect {
+              display: none !important;
+            }
+        </style>
+        <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js" defer></script>
+        <script type="module" src="./script.js" defer></script><!--script参照元-->
+    </head>
+    <body>
+        <header></header>
+        <section id="map"></section>
+        <footer>
+            <p>
+                <small>
+                    © 2024 株式会社インタークロス<!--最初の発行年と著作者-->
+                </small>
+            </p>
+        </footer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr8iMF42N229HyWuXK88Y1kSrcS_vIeZc&callback=initMap&v=weekly&libraries=marker&loading=async" defer></script>
+    </body>
+</html>

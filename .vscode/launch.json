@@ -1,0 +1,64 @@
+// 拡張機能をコンパイルし、新しいウィンドウ内で開く起動構成
+// IntelliSense を使用して利用可能な属性を学べます。
+// 既存の属性の説明をホバーして表示します。
+// 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+{
+    "version": "0.2.0", // 設定ファイルのバージョン
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost/private/practice/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost/private/practice/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Extension", // コンフィグ名（本番環境）
+            "type": "extensionHost", // デバッグターゲット設定（ここではVSCode拡張機能ホスト）
+            "request": "launch", // デバッグの開始方式
+            "runtimeExecutable": "${execPath}", // 実行するプログラムのパス
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ], // プログラムに渡す引数
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ], // デバッグ対象のJSファイルを指定
+            "preLaunchTask": "npm: watch" // デバッグ前に実行するタスク
+        },
+        {
+            "name": "Extension Tests", // コンフィグ名（テスト環境）
+            "type": "extensionHost", // デバッグのターゲットタイプ（ここではVSCode拡張機能ホスト）
+            "request": "launch", // デバッグの開始方式
+            "runtimeExecutable": "${execPath}", // 実行するプログラムのパス
+            "args": [ // プログラムに渡す引数
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionTestsPath=${workspaceFolder}/out/test"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/out/test/**/*.js"
+            ], // デバッグ対象のJSファイルを指定
+            "preLaunchTask": "npm: watch" // デバッグ前に実行するタスク
+        }
+    ]
+}

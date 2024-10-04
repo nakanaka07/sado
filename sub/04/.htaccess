@@ -1,0 +1,3 @@
+<FilesMatch "\.js$">
+  Header set Content-Type text/javascript
+</FilesMatch>

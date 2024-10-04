@@ -1,0 +1,31 @@
+/* マップを含むdiv要素のサイズを定義するために、常にマップの高さを明示的に設定します。 */
+#map {
+  height: 100vh; /* ビューポートの高さに合わせる */
+  width: 100%; /* 全幅に合わせる */
+}
+
+/* オプション: サンプルページをウィンドウ全体にフィットさせます。 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Google マップのホバーエフェクトを無効にする */
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+/* 現在地ボタンのスタイル */
+.custom-map-control-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 10px;
+  padding: 5px 10px;
+}

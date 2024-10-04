@@ -1,0 +1,20 @@
+/*
+ * マップを含むdiv要素のサイズを定義するために、常にマップの高さを明示的に設定します。
+ */
+ #map {
+  height: 100vh; /* ビューポートの高さに合わせる */
+  width: 100%; /* 全幅に合わせる */
+}
+
+/*
+ * オプション: サンプルページをウィンドウ全体にフィットさせます。
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.gm-ui-hover-effect {
+display: none !important;
+}

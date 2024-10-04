@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="佐渡島内の飲食店、駐車場、公共トイレの位置情報を網羅。快適な旅をお手伝いします。">
+  <meta name="robots" content="all">
+  <title>佐渡で食えっちゃ</title>
+</head>
+<body>
+  <header>
+    <img src="./logo/row1.png" alt="佐渡で食えっちゃ ロゴ" id="logo">
+  </header>
+  <main>
+    <section id="map" aria-label="佐渡島の飲食店、駐車場、公共トイレマップ"></section>
+  </main>
+  <footer>
+    <p>
+      <small>
+        © 2024 株式会社インタークロス
+      </small>
+    </p>
+  </footer>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoMdryhPc9X2JnAsOIt4lybU5oR46c58U" type="text/javascript"></script>
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js" async defer></script>
+  <script src="map.js" type="module" defer></script>
+  <script src="script.js" type="module" defer></script>
+  <script>
+    // script.js の読み込みが完了してから initializeMarkerClusterer を実行
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initializeMarkerClusterer === 'function') {
+        initializeMarkerClusterer();
+      }
+    });
+  </script>
+</body>
+</html>
