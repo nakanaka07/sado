@@ -30,7 +30,7 @@ function initMap() {
   });
 
   // MarkerClustererの初期化
-  const markerCluster = new markerCluster({ map });
+  const markerCluster = new MarkerClusterer({ map });
 
   // マーカー作成関数
   const createMapMarker = (data, sheetName) => {
