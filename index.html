@@ -4,10 +4,10 @@
         <meta charset="UTF-8"><!--文字コード-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--レスポンシブ-->
         <meta name="robots" content="ALL"><!--検索クローラー設定-->
-        <meta name="description" content=""><!--サイト説明-->
-        <title></title><!--ページタイトル-->
-        <script src="https://"></script><!--外部.js参照元-->
-        <link rel="stylesheet" href="./"><!--.css参照元-->
+        <meta name="description" content="佐渡島内の飲食店、駐車場、公共トイレの位置情報を網羅。快適な旅をお手伝いします。"><!--サイト説明-->
+        <title>佐渡で食えっちゃ</title><!--ページタイトル-->
+        <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script><!--外部.js参照元-->
+        <link rel="stylesheet" href="./style.css"><!--.css参照元-->
     </head>
     <body>
         <header>
@@ -16,14 +16,22 @@
             </p>
         </header>
         <main>
-            <p>
-            </p>
+            <gmpx-api-loader key="YOUR_API_KEY_HERE" solution-channel="GMP_GE_mapsandplacesautocomplete_v1">
+            </gmpx-api-loader>
+            <gmp-map center="40.749933,-73.98633" zoom="13" map-id="DEMO_MAP_ID">
+            </gmp-map>
+            <div slot="control-block-start-inline-start" class="place-picker-container">
+                <gmpx-place-picker placeholder="Enter an address">
+                </gmpx-place-picker>
+            </div>
+            <gmp-advanced-marker></gmp-advanced-marker>
+            </gmp-map>
         </main>
         <footer>
             <p>
                 <small>&copy; 2024</small><!--最初の発行年+著作者-->
             </p>
         </footer>
-        <script src="./"></script><!--.js参照元-->
+        <script src="./index.js"></script><!--.js参照元-->
     </body>
 </html>
