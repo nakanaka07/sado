@@ -8,9 +8,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["googlemaps"], // pluginsはrulesと同じ階層に配置
   "rules": {
-    "googlemaps/js-api-loading": "error",
-    "googlemaps/no-duplicate-controls": "warn"
+    // プロジェクトに適したルールを追加
   }
 }
